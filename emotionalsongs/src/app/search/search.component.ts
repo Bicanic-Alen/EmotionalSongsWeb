@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import { __values } from 'tslib';
 
 @Component({
   selector: 'app-search',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent {
-
+  value = "";
 }

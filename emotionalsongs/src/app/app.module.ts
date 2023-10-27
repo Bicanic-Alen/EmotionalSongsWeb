@@ -4,6 +4,8 @@ import { MatSliderModule } from '@angular/material/slider';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {LayoutModule} from '@angular/cdk/layout';
@@ -38,6 +40,8 @@ import { SearchComponent } from './search/search.component';
     MatIconModule,
     MatExpansionModule,
     MatToolbarModule,
+    MatInputModule,
+    MatFormFieldModule,
     MatListModule,
     MatButtonModule,
     MatSidenavModule,

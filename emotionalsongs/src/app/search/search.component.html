@@ -1,1 +1,16 @@
-<p>search works!</p>
+<div class="card-presentazione">
+    <mat-card>
+      <div class="form-container">
+        <form class="example-form">
+            <mat-form-field class="example-form-field">
+                <mat-label color = "accent">Ricerca</mat-label>
+                <input class = "inputricerca" color = "accent" matInput type="text"  #ricerca>
+                <button  matSuffix mat-icon-button aria-label="search" (click)="value=''">
+                  <mat-icon>search</mat-icon>
+                </button>
+              </mat-form-field>
+        </form>
+      </div>
+    </mat-card>
+  </div>
+  

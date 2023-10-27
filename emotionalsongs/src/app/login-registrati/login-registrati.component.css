@@ -1,6 +1,22 @@
-.card-presentazione{
-    padding-top: 20px;
-    width: 90%;
-    height: 90%;
-    margin: 0 auto;
-}
+.card-container {
+    display: flex;
+    justify-content: center; /* Centra orizzontalmente i card in versione desktop */
+    align-items: center; /* Centra verticalmente i card in versione mobile */
+    flex-wrap: wrap;
+  }
+  
+  .card-presentazione {
+    margin: 16px;
+    max-width: calc(50% - 32px); /* Imposta la larghezza al 50% del contenitore con margine */
+  }
+  
+  button {
+    width: 100%; /* Imposta la larghezza del bottone al 100% del suo contenitore */
+  }
+
+  @media (max-width: 599px) {
+    .card-presentazione {
+      max-width: 100%; /* In versione mobile, occupa l'intera larghezza */
+    }
+  }
+  
