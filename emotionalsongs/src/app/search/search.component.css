@@ -1,24 +1,77 @@
-.example-form {
-    min-width: 150px;
-    max-width: 500px;
-    width: 100%;
-    padding: 20px;
-   
-  }
-  
-.example-full-width {
-    width: 100%;
+  .example-form-field {
+    width: 600px;
   }
 
 .card-presentazione{
+  align-items: center;
+    justify-content: center;
     padding-top: 20px;
-    width: 90%;
-    height: 90%;
+    width: 95%;
+    height: 95%;
     margin: 0 auto;
 }
 
 .form-container {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: rgba(66,66, 66, 0.9); /* Imposta il colore di sfondo con opacità */
+ 
+}
+
+.table-container {
+  width: 820px; /* Imposta la larghezza del div contenente la tabella a quella desiderata */
+}
+
+table {
+  width: 100%;
+}
+
+.ricerca{
   display: flex;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 10px;
+  overflow: auto; /* Abilita lo scrolling */
+}
+
+
+mat-form-field{
+  padding: 5px;
+}
+
+@media (max-width: 599px) {
+  .example-form-field {
+    width: 250px;
+  }
+
+  .form-container {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+  }
+  mat-form-field{
+    padding: 5px;
+  }
+  table{
+    width: 100%;
+  }
+
+  .ricerca{
+    width: 100%;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 }
 

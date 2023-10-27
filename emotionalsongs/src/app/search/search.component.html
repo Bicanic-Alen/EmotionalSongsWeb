@@ -1,16 +1,61 @@
 <div class="card-presentazione">
-    <mat-card>
-      <div class="form-container">
-        <form class="example-form">
-            <mat-form-field class="example-form-field">
-                <mat-label color = "accent">Ricerca</mat-label>
-                <input class = "inputricerca" color = "accent" matInput type="text"  #ricerca>
-                <button  matSuffix mat-icon-button aria-label="search" (click)="value=''">
-                  <mat-icon>search</mat-icon>
-                </button>
-              </mat-form-field>
-        </form>
-      </div>
-    </mat-card>
-  </div>
+  <mat-card>
+    <div class = "form-container">
+      <mat-form-field class="example-form-field">
+        <mat-label>Ricerca</mat-label>
+        <input class = "inputricerca" matInput type="text"  #ricerca>
+        <button  matSuffix mat-icon-button aria-label="search" (click)="value=''">
+          <mat-icon>search</mat-icon>
+        </button>
+      </mat-form-field>
+
+
+      <mat-form-field>
+        <mat-label>Filtro</mat-label>
+        <mat-select disableRipple>
+          <mat-option value="0">Nessuno</mat-option>
+          <mat-option value="1">Autore</mat-option>
+          <mat-option value="2">Titolo</mat-option>
+          <mat-option value="3">Anno</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class = "ricerca">
+      <div class="table-container">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+      
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef> No. </th>
+          <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+      
+        <!-- Weight Column -->
+        <ng-container matColumnDef="weight">
+          <th mat-header-cell *matHeaderCellDef> Weight </th>
+          <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+        </ng-container>
+      
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="symbol">
+          <th mat-header-cell *matHeaderCellDef> Symbol </th>
+          <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+    </div>
+  </mat-card>
+</div>
   

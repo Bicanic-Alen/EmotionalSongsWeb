@@ -4,10 +4,12 @@ import { MatSliderModule } from '@angular/material/slider';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
+import {MatTableModule} from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { MatOptionModule } from '@angular/material/core';
 import {LayoutModule} from '@angular/cdk/layout';
 import {MatListModule} from '@angular/material/list';
 import {MatDividerModule} from '@angular/material/divider';
@@ -21,20 +23,28 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginRegistratiComponent } from './login-registrati/login-registrati.component';
 import { PlaylistComponent } from './playlist/playlist.component';
 import { SearchComponent } from './search/search.component';
+import {MatSelectModule} from '@angular/material/select';
+import { RegistraComponent } from './registra/registra.component';
+import { LoginComponent } from './login/login.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginRegistratiComponent,
     PlaylistComponent,
-    SearchComponent
+    SearchComponent,
+    RegistraComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     MatDividerModule,
+    MatOptionModule,
     MatButtonToggleModule,
     MatCardModule,
     MatGridListModule,
+    MatTableModule,
     LayoutModule,
     A11yModule,
     MatIconModule,
@@ -43,6 +53,7 @@ import { SearchComponent } from './search/search.component';
     MatInputModule,
     MatFormFieldModule,
     MatListModule,
+    MatSelectModule,
     MatButtonModule,
     MatSidenavModule,
     MatSliderModule,
