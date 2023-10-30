@@ -24,7 +24,9 @@
 }
 
 .table-container {
-  width: 820px; /* Imposta la larghezza del div contenente la tabella a quella desiderata */
+  width: 820px;
+  max-height: 70vh; /* Imposta l'altezza massima desiderata */
+  overflow: auto; /* Abilita la barra di scorrimento se la tabella supera l'altezza massima */
 }
 
 table {
@@ -38,7 +40,14 @@ table {
   flex-direction: column;
   width: 100%;
   padding-top: 10px;
-  overflow: auto; /* Abilita lo scrolling */
+  padding-bottom: 20px;
+}
+
+.mat-header-cell {
+  position: sticky;
+  top: 0;
+  background-color: white; /* Imposta il colore di sfondo desiderato */
+  z-index: 1; /* Assicurati che l'intestazione rimanga in cima agli altri elementi */
 }
 
 
@@ -68,9 +77,17 @@ mat-form-field{
   .ricerca{
     width: 100%;
     padding-top: 10px;
+    padding-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.mat-header-cell {
+  position: sticky;
+  top: 0;
+  background-color: white; /* Imposta il colore di sfondo desiderato */
+  z-index: 1; /* Assicurati che l'intestazione rimanga in cima agli altri elementi */
 }
 
 }

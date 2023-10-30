@@ -1,1 +1,85 @@
-<p>registra works!</p>
+<div class="conteiner">
+    <mat-card>
+        <div class="form">
+            <form class="example-form">
+                <h1>Nome e cognome</h1>
+                <table class="example-full-width" cellspacing="0"><tr>
+                    <td><mat-form-field class="example-full-width">
+                      <mat-label>Nome</mat-label>
+                      <input matInput required #nome>
+                    </mat-form-field></td>
+                    <td><mat-form-field class="example-full-width">
+                      <mat-label>Cognome</mat-label>
+                      <input matInput required #cognome>
+                    </mat-form-field></td>
+                </tr></table>
+        
+                  <hr>
+                  <h1>Indirizzo E-Mail</h1>
+        
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Email</mat-label>
+                    <input type="email" matInput required placeholder="Es. pat@example.com" #email>
+                  </mat-form-field>
+        
+                  <hr>
+        
+                  <h1>
+                    Indirizzo di residenza
+                  </h1>
+
+                  <mat-form-field class="example-full-width" >
+                    <mat-label>Indirizzo</mat-label>
+                    <input type="text" matInput required placeholder="Es. via torino" #indirizzo>
+                  </mat-form-field>
+        
+                  <table class="example-full-width" cellspacing="0"><tr>
+                    <td><mat-form-field class="example-full-width">
+                      <mat-label>Nr. Civico</mat-label>
+                      <input matInput type="number" #nr_civico>
+                    </mat-form-field></td>
+                    <td><mat-form-field class="example-full-width">
+                        <mat-label>Codice postale</mat-label>
+                        <input matInput required maxlength="5" placeholder="Es. 20150" #postalCode>
+                        <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+                      </mat-form-field></td>
+                  </tr></table>
+        
+                  <table class="example-full-width" cellspacing="0"><tr>
+                    <td><mat-form-field class="example-full-width">
+                      <mat-label>Comune</mat-label>
+                      <input matInput required placeholder="Es. Milano" #comune>
+                    </mat-form-field></td>
+                    <td><mat-form-field class="example-full-width">
+                      <mat-label>Provincia</mat-label>
+                      <input matInput required placeholder="Es. Milano" #provincia>
+                    </mat-form-field></td>
+                    
+                  </tr></table>
+
+                  <hr>
+
+                  <h1>Imposta le credenziali di accesso</h1>
+
+                  <table class="example-full-width" cellspacing="0"><tr>
+                    <td><mat-form-field class="example-full-width">
+                      <mat-label>Nome Utente</mat-label>
+                      <input matInput required #nickname>
+                    </mat-form-field></td>
+                    <td><mat-form-field class="example-full-width">
+                        <mat-label>Password</mat-label>
+                        <input matInput required type="password" #password>
+                      </mat-form-field></td>
+                  </tr></table>
+                  <hr>
+                  <p>Compilare tutti i campi con l'asterisco (*)</p>
+                  <button mat-raised-button color="primary" 
+                  style="padding-bottom: 10px; margin-bottom: 10px; width: 100%; height: 50px;">
+                    Conferma
+                </button>
+            </form>
+
+            
+        </div>
+    </mat-card>
+</div>

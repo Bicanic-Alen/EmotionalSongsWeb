@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./registra.component.css']
 })
 export class RegistraComponent {
-
+  hide = true;
 }
