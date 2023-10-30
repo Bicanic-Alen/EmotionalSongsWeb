@@ -8,7 +8,7 @@ export class CanzoniService {
 
   constructor(private http: HttpClient) { }
 
-  getSearch(stringa_di_ricerca:string, titoloF:boolean, autoreF:boolean, annoF:boolean){
+  getSearch(stringa_di_ricerca:string,autoreF:boolean, titoloF:boolean, annoF:boolean){
     const url = `http://localhost:8080/ServerEmotionalsSongs/api/Canzone/searchElement=${stringa_di_ricerca}/searchByAutor=${autoreF}/searchByTitle=${titoloF}/searchByYear=${annoF}`;
     return this.http.get(url);
   }

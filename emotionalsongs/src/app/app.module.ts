@@ -5,6 +5,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'; 
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -48,6 +49,7 @@ import { LoginComponent } from './login/login.component';
     MatGridListModule,
     MatTableModule,
     LayoutModule,
+    FormsModule,
     A11yModule,
     MatIconModule,
     MatExpansionModule,

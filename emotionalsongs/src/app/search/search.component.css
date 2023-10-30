@@ -90,5 +90,11 @@ mat-form-field{
   z-index: 1; /* Assicurati che l'intestazione rimanga in cima agli altri elementi */
 }
 
+.table-container {
+  width: 100%;
+  max-height: 70vh; /* Imposta l'altezza massima desiderata */
+  overflow: auto; /* Abilita la barra di scorrimento se la tabella supera l'altezza massima */
+}
+
 }
 

@@ -23,10 +23,28 @@ export class SearchComponent  {
   
     ricercaCanzone(ricerca: HTMLInputElement, opzioneSelezionata: string) {
       // Esegui la richiesta al servizio CanzoniService per ottenere i dati
-      if()
-      this.canzone.getSearch(ricerca.value, true, true, true).subscribe((response: any) => {
-        this.dati = response; // Assegna i dati ottenuti dalla risposta HTTP all'array dati
-      });
+      if(opzioneSelezionata=="0"){
+        this.canzone.getSearch(ricerca.value, true, true, true).subscribe((response: any) => {
+          this.dati = response; // Assegna i dati ottenuti dalla risposta HTTP all'array dati
+        });
+      }else if(opzioneSelezionata=="1"){
+        this.canzone.getSearch(ricerca.value, true, false, false).subscribe((response: any) => {
+          this.dati = response; // Assegna i dati ottenuti dalla risposta HTTP all'array dati
+        });
+      }else if(opzioneSelezionata=="2"){
+        this.canzone.getSearch(ricerca.value, false, true, false).subscribe((response: any) => {
+          this.dati = response; // Assegna i dati ottenuti dalla risposta HTTP all'array dati
+        });
+      }else if(opzioneSelezionata=="3"){
+        this.canzone.getSearch(ricerca.value, false, false, true).subscribe((response: any) => {
+          this.dati = response; // Assegna i dati ottenuti dalla risposta HTTP all'array dati
+        });
+      }else{
+        this.canzone.getSearch(ricerca.value, true, true, true).subscribe((response: any) => {
+          this.dati = response; // Assegna i dati ottenuti dalla risposta HTTP all'array dati
+        });
+      }
+      
     }
 
   
